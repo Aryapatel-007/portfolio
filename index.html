@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arya Patel — Software Engineer</title>
+<meta name="description" content="Arya Patel builds local-first AI tools, offline-first business software for real clients, and contributes to open source (axios, sympy, pydantic-ai, rollup, koa, poetry, marked).">
+<meta property="og:title" content="Arya Patel — Software Engineer">
+<meta property="og:description" content="Local-first AI tools, offline-first ERPs for real businesses, and open-source contributions.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0d10">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2311161d'/><text x='50%25' y='56%25' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='700' fill='%237dd3fc' text-anchor='middle' dominant-baseline='middle'>AP</text></svg>">
+<style>
+  :root {
+    --bg: #fafaf9; --surface: #ffffff; --text: #18181b; --muted: #5b5b66; --faint: #8a8a96;
+    --line: #e7e5e4; --accent: #0369a1; --accent-soft: #e0f2fe; --chip: #f4f4f5; --merged: #7c3aed;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0d10; --surface: #11161d; --text: #e7e9ee; --muted: #a2a9b6; --faint: #6f7785;
+      --line: #1f2731; --accent: #7dd3fc; --accent-soft: #0c2a3a; --chip: #161d26; --merged: #a78bfa;
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  nav { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px); background: color-mix(in srgb, var(--bg) 82%, transparent); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  nav .brand { font-weight: 700; letter-spacing: -.01em; text-decoration: none; }
+  nav .links { display: flex; gap: 18px; font-size: 14px; }
+  nav .links a { text-decoration: none; color: var(--muted); }
+  nav .links a:hover { color: var(--text); }
+
+  header.hero { padding: 88px 0 56px; }
+  .eyebrow { font: 600 12px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.05; letter-spacing: -.03em; margin: 16px 0 18px; }
+  .lead { font-size: clamp(17px, 2.2vw, 20px); color: var(--muted); max-width: 680px; margin: 0; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 10px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--line); background: var(--surface); }
+  .btn.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .btn:hover { transform: translateY(-1px); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin-top: 52px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .stat b { display: block; font-size: 26px; letter-spacing: -.02em; }
+  .stat span { color: var(--muted); font-size: 14px; }
+
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 26px; letter-spacing: -.02em; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; box-shadow: var(--shadow); text-decoration: none; transition: border-color .15s, transform .15s; }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card .kind { font: 600 11px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+  .card h3 { margin: 10px 0 8px; font-size: 19px; letter-spacing: -.01em; }
+  .card p { margin: 0 0 16px; color: var(--muted); font-size: 15px; flex: 1; }
+  .card ul { margin: 0 0 16px; padding-left: 18px; color: var(--muted); font-size: 14px; }
+  .card ul li { margin: 3px 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 12px; padding: 3px 9px; border-radius: 999px; background: var(--chip); color: var(--muted); border: 1px solid var(--line); }
+  .card .go { margin-top: 14px; font-size: 14px; font-weight: 600; color: var(--accent); }
+
+  .small-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+  .small { display: block; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); text-decoration: none; }
+  .small:hover { border-color: var(--accent); }
+  .small b { display: block; margin-bottom: 4px; }
+  .small span { font-size: 14px; color: var(--muted); }
+
+  .prs { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--surface); }
+  .prs li + li { border-top: 1px solid var(--line); }
+  .prs a { display: grid; grid-template-columns: 170px 1fr auto; gap: 16px; align-items: center; padding: 14px 18px; text-decoration: none; }
+  .prs a:hover { background: var(--chip); }
+  .prs .repo { font: 600 13px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .prs .title { color: var(--muted); font-size: 15px; }
+  .badge { font-size: 12px; font-weight: 600; color: var(--merged); border: 1px solid currentColor; border-radius: 999px; padding: 2px 10px; white-space: nowrap; }
+
+  .stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .stack div { border: 1px solid var(--line); border-radius: 14px; padding: 18px; background: var(--surface); }
+  .stack h4 { margin: 0 0 10px; font-size: 14px; color: var(--faint); text-transform: uppercase; letter-spacing: .08em; }
+
+  .principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .principles div { padding: 4px 0; }
+  .principles b { display: block; margin-bottom: 4px; }
+  .principles span { color: var(--muted); font-size: 15px; }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0 60px; color: var(--faint); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; }
+
+  @media (max-width: 640px) {
+    nav .links { gap: 12px; }
+    nav .links a.hide-sm { display: none; }
+    .prs a { grid-template-columns: 1fr; gap: 4px; }
+    .badge { justify-self: start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#">Arya Patel</a>
+    <div class="links">
+      <a href="#work">Work</a>
+      <a href="#open-source">Open source</a>
+      <a class="hide-sm" href="#stack">Stack</a>
+      <a href="https://github.com/Aryapatel-007">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Software engineer</div>
+    <h1>I build software that works<br>when the network doesn't.</h1>
+    <p class="lead">
+      Local-first AI tools that run on your own GPU, offline-first ERP and POS systems
+      running in real restaurants and factories, and fixes that ship in open-source
+      projects used by millions.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#work">See my work</a>
+      <a class="btn" href="https://github.com/Aryapatel-007">GitHub ↗</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>8</b><span>merged PRs in projects like axios, sympy &amp; pydantic-ai</span></div>
+      <div class="stat"><b>5</b><span>business systems built for real clients</span></div>
+      <div class="stat"><b>0</b><span>cloud APIs needed by my AI tools: all run on Ollama</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Featured work</h2>
+    <p class="sub">Each one solves a problem I actually had, or one a client was paying for.</p>
+
+    <div class="grid">
+      <a class="card" href="https://github.com/Aryapatel-007/argus">
+        <span class="kind">Multi-agent system · Python</span>
+        <h3>Argus</h3>
+        <p>Watches the web pages you care about, works out what genuinely changed, remembers it, and drafts a message, which never leaves your machine until you approve it.</p>
+        <ul>
+          <li>Runs as a typed task graph that re-plans at run time</li>
+          <li>Picks a model per step around a single GPU's VRAM</li>
+          <li>Crash-safe: resumes mid-run with no duplicate work</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Ollama</span><span class="tag">SQLite</span><span class="tag">MCP</span></div>
+        <span class="go">View repository →</span>
+      </a>
+
+      <a class="card" href="https://github.com/Aryapatel-007/caveman-code">
+        <span class="kind">AI coding agent · VS Code</span>
+        <h3>Caveman Code</h3>
+        <p>A local coding agent where your compiler, not the model, decides what ships. Several models propose edits; each is compiled in a shadow workspace and your own toolchain picks the winner.</p>
+        <ul>
+          <li>Leader model repairs itself from its own compiler errors</li>
+          <li>Rules in <code>.cavemanrules</code> are enforced by the scorer, not just the prompt</li>
+          <li>Ships its own benchmark and prompt-evolution harness</li>
+        </ul>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">VS Code API</span><span class="tag">Ollama</span></div>
+        <span class="go">View repository →</span>
+      </a>
+
+      <a class="card" href="https://github.com/Aryapatel-007/three-o-clock-erp">
+        <span class="kind">Client work · Restaurant ERP</span>
+        <h3>Three O'Clock ERP</h3>
+        <p>Billing, KOTs, inventory and reports for an independent restaurant, built so the counter never waits on the internet.</p>
+        <ul>
+          <li>Runs on a box inside the café, with two-way sync to the cloud</li>
+          <li>Reports reconcile against a golden test day</li>
+          <li>One-click Windows installer for the café PC</li>
+        </ul>
+        <div class="tags"><span class="tag">MongoDB</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">Node</span></div>
+        <span class="go">View repository →</span>
+      </a>
+
+      <a class="card" href="https://github.com/Aryapatel-007/forge-erp">
+        <span class="kind">Client work · Manufacturing ERP</span>
+        <h3>Forge ERP</h3>
+        <p>ERP for a build-to-order pharmaceutical machine manufacturer, with Indian GST, written from scratch.</p>
+        <ul>
+          <li>Every posting is a MongoDB transaction</li>
+          <li>The app's DB role can only read and insert on ledgers, so nobody can rewrite the books</li>
+        </ul>
+        <div class="tags"><span class="tag">MongoDB</span><span class="tag">Express 5</span><span class="tag">React 18</span><span class="tag">GST</span></div>
+        <span class="go">View repository →</span>
+      </a>
+
+      <a class="card" href="https://github.com/Aryapatel-007/BugLens">
+        <span class="kind">QA tooling · Next.js</span>
+        <h3>BugLens</h3>
+        <p>Turns a one-line bug description into a full bug report, and diffs a live page against its Figma design, element by element.</p>
+        <ul>
+          <li>Matches text one-to-one and estimates the layout offset, which keeps false positives down</li>
+          <li>Checks fonts, colours, alignment, position and element counts</li>
+        </ul>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">Playwright</span><span class="tag">Figma API</span></div>
+        <span class="go">View repository →</span>
+      </a>
+
+      <a class="card" href="https://github.com/Aryapatel-007/TailorResume">
+        <span class="kind">Desktop app · Electron</span>
+        <h3>Resume Tailor</h3>
+        <p>Paste your whole career once and get a resume tailored to each job. Five LangGraph steps, wrapped in code that checks the model's work.</p>
+        <ul>
+          <li>Never invents skills; metrics are verified before and after</li>
+          <li>Excluded technologies are stripped in code, not just in the prompt</li>
+        </ul>
+        <div class="tags"><span class="tag">Electron</span><span class="tag">React</span><span class="tag">LangGraph</span><span class="tag">Ollama</span></div>
+        <span class="go">View repository →</span>
+      </a>
+    </div>
+
+    <h2 style="margin-top:44px;font-size:20px">More projects</h2>
+    <p class="sub">Smaller tools and apps.</p>
+    <div class="small-grid">
+      <a class="small" href="https://github.com/Aryapatel-007/caveman-optimizer"><b>Caveman Optimizer</b><span>Press a hotkey to compress the prompt on your clipboard, using context from your open chat or editor.</span></a>
+      <a class="small" href="https://github.com/Aryapatel-007/token-saver"><b>Token Saver</b><span>VS Code extension that measures real token savings with an A/B run on every message.</span></a>
+      <a class="small" href="https://github.com/Aryapatel-007/HisabWise"><b>HisabWise</b><span>Android app for splitting trip expenses, offline or synced with friends. Kotlin and Jetpack Compose.</span></a>
+      <a class="small" href="https://caffeza-azure.vercel.app"><b>Caffeza ↗</b><span>Live restaurant ERP deployment for a café client.</span></a>
+      <a class="small" href="https://apg-ai-prompt-generator.vercel.app"><b>APG Prompt Generator ↗</b><span>Three steps from a vague idea to a precise prompt. Live on Vercel.</span></a>
+      <a class="small" href="https://github.com/Aryapatel-007/Voyager-Prototype-Itinerary-Generator"><b>Voyager</b><span>Itinerary generator prototype built on LangChain and LangGraph.</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="open-source">
+  <div class="wrap">
+    <h2>Open source</h2>
+    <p class="sub">Merged contributions to projects other people depend on.</p>
+    <ul class="prs">
+      <li><a href="https://github.com/sympy/sympy/pull/30905"><span class="repo">sympy/sympy</span><span class="title">Parenthesize <code>frac</code> in PythonCodePrinter</span><span class="badge">merged</span></a></li>
+      <li><a href="https://github.com/pydantic/pydantic-ai/pull/12126"><span class="repo">pydantic/pydantic-ai</span><span class="title">Keep <code>*args</code> / <code>**kwargs</code> docstring descriptions on tool parameters</span><span class="badge">merged</span></a></li>
+      <li><a href="https://github.com/axios/axios/pull/11429"><span class="repo">axios/axios</span><span class="title">Add missing error codes to the error tables</span><span class="badge">merged</span></a></li>
+      <li><a href="https://github.com/axios/axios/pull/11430"><span class="repo">axios/axios</span><span class="title">Note that FormData parsing has a fixed depth limit</span><span class="badge">merged</span></a></li>
+      <li><a href="https://github.com/rollup/rollup/pull/6638"><span class="repo">rollup/rollup</span><span class="title">Add missing options to the config file example</span><span class="badge">merged</span></a></li>
+      <li><a href="https://github.com/koajs/koa/pull/2039"><span class="repo">koajs/koa</span><span class="title">Add missing ctx aliases to the context API list</span><span class="badge">merged</span></a></li>
+      <li><a href="https://github.com/python-poetry/poetry/pull/11213"><span class="repo">python-poetry/poetry</span><span class="title">Use the plugin repo for the poetry-export pre-commit hook</span><span class="badge">merged</span></a></li>
+      <li><a href="https://github.com/markedjs/marked/pull/4192"><span class="repo">markedjs/marked</span><span class="title">List <code>--version</code> in the man page and fix <code>--no-</code> option spelling</span><span class="badge">merged</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <h2>What I work with</h2>
+    <p class="sub">The tools I reach for, grouped by job.</p>
+    <div class="stack">
+      <div><h4>Languages</h4><div class="tags"><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">Kotlin</span><span class="tag">SQL</span></div></div>
+      <div><h4>Web &amp; backend</h4><div class="tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">SQLite</span><span class="tag">Tailwind</span></div></div>
+      <div><h4>AI &amp; agents</h4><div class="tags"><span class="tag">Ollama</span><span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">MCP</span><span class="tag">RAG</span></div></div>
+      <div><h4>Desktop, mobile &amp; QA</h4><div class="tags"><span class="tag">Electron</span><span class="tag">VS Code API</span><span class="tag">Jetpack Compose</span><span class="tag">Playwright</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How I build</h2>
+    <p class="sub">The same few rules show up in every project.</p>
+    <div class="principles">
+      <div><b>Verify, don't trust</b><span>Model output passes through compilers, validators and tests before anyone sees it.</span></div>
+      <div><b>Local-first</b><span>Your data stays on your machine, and the café's billing works when the WiFi doesn't.</span></div>
+      <div><b>Safe by structure</b><span>Approval gates, append-only ledgers and crash-safe checkpoints are part of the design, not reminders in a doc.</span></div>
+      <div><b>Measure it</b><span>Benchmarks and A/B runs instead of demos that happened to go well.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Arya Patel</span>
+    <span><a href="https://github.com/Aryapatel-007">github.com/Aryapatel-007</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
